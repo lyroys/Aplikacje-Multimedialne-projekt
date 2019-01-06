@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  # encoding: utf8
+  pool: 5
+  username: lyroys_am-project
+  password: Test123!
+  host: sql.lyroys.nazwa.pl
+  port: 3306
+  # port: 3306
+
+development:
+  <<: *default
+  database: lyroys_am-project
+
+
+test:
+  <<: *default
+  database: lyroys_am-project
+
+production:
+  <<: *default
+  database: production_db_name
